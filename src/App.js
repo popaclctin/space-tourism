@@ -4,6 +4,7 @@ import ExploreBtn from './components/ExploreBtn';
 import NavBar from './components/NavBar';
 import Tabs from './components/Tabs';
 import Dots from './components/Dots';
+import Indicators from './components/Indicators';
 
 import { GlobalStyle } from './GlobalStyle';
 
@@ -15,6 +16,7 @@ export default function App() {
       <ExploreBtn />
       <Tabs />
       <Dots />
+      <Indicators />
     </>
   );
 }
