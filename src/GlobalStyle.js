@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`    
+    
+    /* ------------------- */
+    /* Custom properties   */
+    /* ------------------- */
+
     :root {
         /* Colors */
         --clr-dark: 11 13 23;
@@ -23,7 +28,9 @@ export const GlobalStyle = createGlobalStyle`
         --ff-serif: 'Bellefair', serif;
     }
     
-    /* Reset */
+    /* ------------------- */
+    /* Resets   */
+    /* ------------------- */
 
     /* Box sizing */
     *,*::before,*::after {
@@ -74,6 +81,68 @@ export const GlobalStyle = createGlobalStyle`
             transition-duration: 0.01ms !important;
             scroll-behavior: auto !important;
         }
+    }
+
+    /* ------------------- */
+    /* Utility classes     */
+    /* ------------------- */
+
+    .flex {
+        display:flex;
+        gap: var(--gap, 1rem);
+    }
+
+    .grid {
+        display: grid;
+        gap: var(--gap, 1rem);
+    }
+
+    .flow > * + * {
+        margin-top: var(--flow-space, 1rem);
+    }
+
+    .container {
+        padding: 0 2em;
+        margin: 0 auto;
+        max-width: 80rem;
+    }
+
+    /* Colors */
+
+    .bg-dark { background-color: rgb( var(--clr-dark) );}
+    .bg-accent { background-color: rgb( var(--clr-light) );}
+    .bg-white { background-color: rgb( var(--clr-white) );}
+
+    .text-dark { color: rgb( var(--clr-dark) );}
+    .text-accent { color: rgb( var(--clr-light) );}
+    .text-white { color: rgb( var(--clr-white) );}
+
+    /* Typography */
+
+    .ff-serif { font-family: var(--ff-serif); } 
+    .ff-sans-cond { font-family: var(--ff-sans-cond); } 
+    .ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+    .letter-spacing-1 { letter-spacing: 4.75px; } 
+    .letter-spacing-2 { letter-spacing: 2.7px; } 
+    .letter-spacing-3 { letter-spacing: 2.35px; } 
+
+    .uppercase { text-transform: uppercase; }
+
+    .fs-900 { font-size: var(--fs-900); }
+    .fs-800 { font-size: var(--fs-800); }
+    .fs-700 { font-size: var(--fs-700); }
+    .fs-600 { font-size: var(--fs-600); }
+    .fs-500 { font-size: var(--fs-500); }
+    .fs-400 { font-size: var(--fs-400); }
+    .fs-300 { font-size: var(--fs-300); }
+    .fs-200 { font-size: var(--fs-200); }
+
+    .fs-900,
+    .fs-800,
+    .fs-700,
+    .fs-600 {
+        line-height: 1.1;
     }
 
 `;
