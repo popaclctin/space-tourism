@@ -1,22 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import ExploreBtn from './components/ExploreBtn';
-import NavBar from './components/NavBar';
-import Tabs from './components/Tabs';
-import Dots from './components/Dots';
-import Indicators from './components/Indicators';
+import Home from './pages/Home';
+import Header from './components/Header';
 
-import { GlobalStyle } from './GlobalStyle';
+import { GlobalStyle } from './styles/Global.style';
 
 export default function App() {
   return (
-    <>
+    <Router>
       <GlobalStyle />
-      <NavBar />
-      <ExploreBtn />
-      <Tabs />
-      <Dots />
-      <Indicators />
-    </>
+      <Header />
+      <Switch>
+        <Route path='/'>
+          <Home></Home>
+        </Route>
+      </Switch>
+    </Router>
   );
 }

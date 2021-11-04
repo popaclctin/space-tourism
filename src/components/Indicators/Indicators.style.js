@@ -6,23 +6,24 @@ export const Wrapper = styled.div`
   gap: 2rem;
 
   button {
+    width: 4rem;
+    padding: 0;
+    aspect-ratio: 1;
     cursor: pointer;
     font-weight: 600;
     color: rgb(var(--clr-white));
     border: 0.1rem solid rgb(var(--clr-white) / 0.25);
     border-radius: 50%;
-    aspect-ratio: 1;
-    width: 3%;
     background-color: transparent;
 
-    :hover,
-    :focus {
+    &:hover,
+    &:focus {
       border: 0.1rem solid rgb(var(--clr-white) / 1);
     }
-  }
 
-  button.active {
-    background-color: rgb(var(--clr-white));
-    color: rgb(var(--clr-dark));
+    &.active {
+      background-color: rgb(var(--clr-white));
+      color: rgb(var(--clr-dark));
+    }
   }
 `;

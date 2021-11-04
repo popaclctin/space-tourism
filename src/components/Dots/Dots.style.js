@@ -12,13 +12,13 @@ export const Wrapper = styled.div`
     padding: 0.5em;
     background-color: rgb(var(--clr-white) / 0.25);
 
-    :hover,
-    :focus {
+    &:hover,
+    &:focus {
       background-color: rgb(var(--clr-white) / 0.5);
     }
-  }
 
-  button.active {
-    background-color: rgb(var(--clr-white) / 1);
+    &.active {
+      background-color: rgb(var(--clr-white) / 1);
+    }
   }
 `;

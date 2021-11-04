@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     /* Custom properties   */
     /* ------------------- */
 
+    //Mobile
     :root {
         /* Colors */
         --clr-dark: 11 13 23;
@@ -13,12 +14,12 @@ export const GlobalStyle = createGlobalStyle`
         --clr-white: 255 255 255;
 
         /* Font sizes */
-        --fs-900: 9.375rem;
-        --fs-800: 6.25rem;
-        --fs-700: 3.5rem;
-        --fs-600: 2rem;
+        --fs-900: 5rem;
+        --fs-800: 3.5rem;
+        --fs-700: 1.5rem;
+        --fs-600: 1rem;
         --fs-500: 1.75rem;
-        --fs-400: 1.125rem;
+        --fs-400: 0.9375rem;
         --fs-300: 1rem;
         --fs-200: 0.875rem;
 
@@ -26,6 +27,25 @@ export const GlobalStyle = createGlobalStyle`
         --ff-sans-normal: 'Barlow', sans-serif;
         --ff-sans-cond: 'Barlow Condensed', sans-serif;
         --ff-serif: 'Bellefair', serif;
+    }
+
+    //Tablet
+    @media(min-width:35em) {
+        /* Font sizes */
+        --fs-900: 9.375rem;
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-400: 1rem;
+    }
+
+    //Desktop
+    @media(min-width:45em) {
+        /* Font sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-400: 1.125rem;
     }
     
     /* ------------------- */
@@ -57,7 +77,12 @@ export const GlobalStyle = createGlobalStyle`
         color: rgb(var(--clr-white));
         background-color: rgb(var(--clr-dark));
         line-height: 1.5;
+    }
+
+    #root {
         min-height: 100vh;
+        display:grid;
+        grid-template-rows: min-content 1fr;
     }
 
     /* Make images easier to use */
