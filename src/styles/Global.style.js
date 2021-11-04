@@ -79,12 +79,6 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.5;
     }
 
-    #root {
-        min-height: 100vh;
-        display:grid;
-        grid-template-rows: min-content 1fr;
-    }
-
     /* Make images easier to use */
     img, picture {
         max-width: 100%;
@@ -124,6 +118,10 @@ export const GlobalStyle = createGlobalStyle`
 
     .flow > * + * {
         margin-top: var(--flow-space, 1rem);
+    }
+
+    .d-block {
+        display: block;
     }
 
     .container {

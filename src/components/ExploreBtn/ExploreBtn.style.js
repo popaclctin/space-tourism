@@ -9,7 +9,7 @@ export const Wrapper = styled.a`
   aspect-ratio: 1;
   border-radius: 50%;
   font-family: var(--ff-serif);
-  font-size: var(--fs-600);
+  font-size: 2rem;
   color: rgb(var(--clr-dark));
   background-color: rgb(var(--clr-white));
   text-decoration: none;
