@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Wrapper } from './NavBar.style';
 
 export default function NavBar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Wrapper>
-      <ul>
+    <Wrapper open={open}>
+      <button
+        class='mobile-nav-toggle'
+        aria-controls='primary-navigation'
+        onClick={() => setOpen(!open)}
+      ></button>
+      <ul id='primary-navigation' class='primary-navigation'>
         <li className='active'>
           <a href='#'>
             <span>00</span>Home
@@ -30,3 +37,5 @@ export default function NavBar() {
     </Wrapper>
   );
 }
+
+function toggleMenu() {}

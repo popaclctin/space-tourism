@@ -10,7 +10,7 @@ import { GridContainerHome } from '../../styles/GridContainer.style';
 export default function Home() {
   return (
     <Wrapper>
-      {/* <Header /> */}
+      <Header />
       <GridContainerHome>
         <div>
           <h1 className='text-accent fs-500 ff-sans-cond uppercase letter-spacing-1'>
