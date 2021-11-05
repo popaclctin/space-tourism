@@ -5,10 +5,40 @@ import hamburgerClose from '../../assets/shared/icon-close.svg';
 
 export const Wrapper = styled.nav`
   .primary-navigation {
+    display: flex;
+    gap: clamp(1.5rem, 5vw, 3.5rem);
     list-style: none;
     margin: 0;
     padding: 0;
     background: rgb(var(--clr-dark) / 0.95);
+  }
+
+  .primary-navigation > * {
+    cursor: pointer;
+    padding: 1rem 0;
+    border: 0;
+    border-bottom: 0.2rem solid rgb(var(--clr-white) / 0);
+  }
+
+  .primary-navigation > *:hover,
+  .primary-navigation > *:focus {
+    border-color: rgb(var(--clr-white) / 0.5);
+  }
+
+  .primary-navigation > .active {
+    border: 0;
+  }
+
+  .primary-navigation li a {
+    color: var(--clr-white);
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .primary-navigation li a > span {
+    font-weight: 700;
+    margin-right: 0.5em;
   }
 
   @supports (backdrop-filter: blur(2rem)) {
@@ -56,31 +86,13 @@ export const Wrapper = styled.nav`
     }
   }
 
-  .primary-navigation > * {
-    cursor: pointer;
-    padding: 1rem 0;
-    border: 0;
-    border-bottom: 0.2rem solid rgb(var(--clr-white) / 0);
-  }
+  @media (min-width: 35em) and (max-width: 45em) {
+    .primary-navigation {
+      margin: 0 3rem;
+    }
 
-  .primary-navigation > *:hover,
-  .primary-navigation > *:focus {
-    border-color: rgb(var(--clr-white) / 0.5);
-  }
-
-  .primary-navigation > .active {
-    border: 0;
-  }
-
-  li a {
-    color: var(--clr-white);
-    letter-spacing: 2.7px;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
-  li a > span {
-    font-weight: 700;
-    margin-right: 0.5em;
+    .primary-navigation li a > span {
+      display: none;
+    }
   }
 `;
