@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { Wrapper } from './Tabs.style';
+import { Wrapper } from './Tabs.styled';
 
 export default function Tabs() {
   return (
     <Wrapper>
-      <button className='active'>Moon</button>
-      <button>Mars</button>
-      <button>Europa</button>
+      <button aria-selected='true'>Moon</button>
+      <button aria-selected='false'>Mars</button>
+      <button aria-selected='false'>Europa</button>
+      <button aria-selected='false'>Titan</button>
     </Wrapper>
   );
 }
