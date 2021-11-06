@@ -19,6 +19,9 @@ export default function App() {
         <Route exact path='/'>
           <Home />
         </Route>
+        <Route path='/destination'>
+          <Destination data={data} />
+        </Route>
       </Switch>
     </Router>
   );

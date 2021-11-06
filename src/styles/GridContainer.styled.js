@@ -7,7 +7,7 @@ export const GridContainer = styled.main`
   padding: 0 1rem;
   padding-bottom: 4rem;
 
-  * {
+  p:not([class]) {
     max-width: 50ch;
   }
 
@@ -17,13 +17,5 @@ export const GridContainer = styled.main`
     grid-template-columns:
       minmax(2rem, 1fr) repeat(2, minmax(0, 40rem))
       minmax(2rem, 1fr);
-
-    > *:first-child {
-      grid-column: 2;
-    }
-
-    > *:last-child {
-      grid-column: 3;
-    }
   }
 `;

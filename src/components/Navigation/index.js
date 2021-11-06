@@ -1,16 +1,17 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { Wrapper } from './Navigation.styled';
 
 export default function Navigation({ open }) {
   return (
     <Wrapper open={open}>
-      <li className='active'>
+      <NavLink to='/'>
         <span>00</span>Home
-      </li>
-      <li>
+      </NavLink>
+      <NavLink to='/destination'>
         <span>01</span>Destination
-      </li>
+      </NavLink>
       <li>
         <span>02</span>Crew
       </li>

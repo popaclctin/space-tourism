@@ -8,9 +8,7 @@ import bgDesktop from '../../assets/destination/background-destination-desktop.j
 
 export const Wrapper = styled.div`
   min-height: 100vh;
-
   overflow-x: hidden;
-
   background-size: cover;
   background-position: bottom center;
   background-image: url(${bgMobile});
@@ -34,7 +32,47 @@ export const Wrapper = styled.div`
   .numbered-title span {
     margin-right: 0.5em;
     font-weight: 700;
-    color: hsl(var(--clr-white) / 0.25);
+    color: rgb(var(--clr-white) / 0.25);
+  }
+
+  article h2 {
+    text-transform: uppercase;
+    font-size: var(--fs-800);
+    font-family: var(--ff-serif);
+  }
+
+  .destination_meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    border-top: 1px solid rgb(var(--clr-white) / 0.1);
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .destination_meta h3 {
+    color: rgb(var(--clr-light));
+    font-size: var(--fs-200);
+    text-transform: uppercase;
+  }
+
+  .destination_meta p {
+    font-size: 1.75rem;
+    font-family: var(--ff-serif);
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 35em) {
+    .numbered-title {
+      justify-self: start;
+      margin-top: 2rem;
+    }
+
+    .destination_meta {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
 `;
 
@@ -52,18 +90,34 @@ export const GridContainerDestination = styled(GridContainer)`
     max-width: 60%;
   }
 
-  & > .tab-list {
+  & > .tabs-list {
     grid-area: tabs;
   }
 
-  & > .destination-info {
+  & > article {
     grid-area: content;
   }
 
-  .destination-meta {
-    flex-direction: column;
-    border-top: 1px solid rgb(var(--clr-white) / 0.1);
-    padding-top: 2.5rem;
-    margin-top: 2.5rem;
+  & > * + * {
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 45em) {
+    grid-template-columns: none;
+    justify-items: start;
+    align-content: start;
+    grid-template-areas:
+      '. title title .'
+      '. image tabs .'
+      '. image content .';
+
+    & > img {
+      max-width: 90%;
+    }
+
+    .destination_meta {
+      gap: min(6vw, 6rem);
+      justify-content: flex-start;
+    }
   }
 `;

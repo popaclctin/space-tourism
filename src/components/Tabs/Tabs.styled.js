@@ -5,11 +5,12 @@ export const Wrapper = styled.div`
   gap: 2.5rem;
 
   > * {
-    padding: 1em 0;
+    padding: 0.5em 0;
     font-family: var(--ff-sans-cond);
     text-transform: uppercase;
+    letter-spacing: 4.75px;
     color: rgb(var(--clr-light));
-    background-color: rgb(var(--clr-dark));
+    background-color: transparent;
     border: 0;
     border-bottom: 0.2rem solid rgb(var(--clr-white) / 0);
     cursor: pointer;

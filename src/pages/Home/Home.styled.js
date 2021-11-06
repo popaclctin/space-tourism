@@ -47,5 +47,12 @@ export const GridContainerHome = styled(GridContainer)`
   @media (min-width: 45em) {
     padding-bottom: max(6rem, 10vh);
     align-items: end;
+    & > *:first-child {
+      grid-column: 2;
+    }
+
+    & > *:last-child {
+      grid-column: 3;
+    }
   }
 `;
