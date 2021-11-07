@@ -1,22 +1,28 @@
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 import { Wrapper } from './Dots.styled';
 
 export default function Dots() {
   return (
     <Wrapper>
-      <button aria-selected='true'>
-        <span class='sr-only'>The commander</span>
-      </button>
-      <button aria-selected='false'>
-        <span class='sr-only'>The mission specialist</span>
-      </button>
-      <button aria-selected='false'>
-        <span class='sr-only'>The pilot</span>
-      </button>
-      <button aria-selected='false'>
-        <span class='sr-only'>The crew engineer</span>
-      </button>
+      <ul>
+        <li>
+          <span class='sr-only'>The commander</span>
+          <NavLink to='/crew/Hurley' />
+        </li>
+        <li>
+          <span class='sr-only'>The mission specialist</span>
+          <NavLink to='/crew/Shuttleworth' />
+        </li>
+        <li>
+          <span class='sr-only'>The pilot</span>
+          <NavLink to='/crew/Glover' />
+        </li>
+        <li>
+          <span class='sr-only'>The crew engineer</span>
+          <NavLink to='/crew/Ansari' />
+        </li>
+      </ul>
     </Wrapper>
   );
 }

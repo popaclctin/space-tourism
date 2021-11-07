@@ -4,10 +4,10 @@ import { Wrapper, GridContainerCrew } from './Crew.styled';
 import Header from '../../components/Header';
 import Dots from '../../components/Dots';
 
-import hurley from '../../assets/crew/image-douglas-hurley.png';
-import hurleywebp from '../../assets/crew/image-douglas-hurley.webp';
+import png from '../../assets/crew/image-douglas-hurley.png';
+import webp from '../../assets/crew/image-douglas-hurley.webp';
 
-function Crew() {
+function Hurley() {
   return (
     <Wrapper>
       <Header />
@@ -28,12 +28,12 @@ function Crew() {
           </p>
         </article>
         <picture>
-          <source srcset={hurleywebp} type='image/webp' />
-          <img src={hurley} alt='Douglas Hurley' />
+          <source srcset={webp} type='image/webp' />
+          <img src={png} alt='Douglas Hurley' />
         </picture>
       </GridContainerCrew>
     </Wrapper>
   );
 }
 
-export default Crew;
+export default Hurley;

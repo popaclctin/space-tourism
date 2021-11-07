@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  display: flex;
-  gap: 2rem;
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+  }
 
-  > * {
+  a {
+    display: block;
     cursor: pointer;
     border: 0;
     border-radius: 50%;
@@ -13,12 +19,12 @@ export const Wrapper = styled.div`
     background-color: rgb(var(--clr-white) / 0.25);
   }
 
-  > *:hover,
-  > *:focus {
+  a:hover,
+  a:focus {
     background-color: rgb(var(--clr-white) / 0.5);
   }
 
-  > [aria-selected='true'] {
+  .active {
     background-color: rgb(var(--clr-white) / 1);
   }
 `;
