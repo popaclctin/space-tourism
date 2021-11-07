@@ -8,6 +8,8 @@ import bgDesktop from '../../assets/crew/background-crew-desktop.jpg';
 
 export const Wrapper = styled.div`
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
   overflow-x: hidden;
   background-size: cover;
   background-position: bottom center;
@@ -101,6 +103,7 @@ export const GridContainerCrew = styled(GridContainer)`
       'image';
 
     & > picture {
+      margin: 0;
       max-width: 90%;
       align-self: end;
     }

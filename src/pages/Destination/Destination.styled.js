@@ -8,6 +8,7 @@ import bgDesktop from '../../assets/destination/background-destination-desktop.j
 
 export const Wrapper = styled.div`
   min-height: 100vh;
+  grid-template-rows: min-content 1fr;
   overflow-x: hidden;
   background-size: cover;
   background-position: bottom center;
