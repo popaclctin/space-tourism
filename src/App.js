@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Destination from './pages/Destination';
+import Crew from './pages/Crew';
 import Test from './pages/Test';
 
 import { GlobalStyle } from './styles/Global.styled';
@@ -21,6 +22,9 @@ export default function App() {
         </Route>
         <Route path='/destination'>
           <Destination data={data} />
+        </Route>
+        <Route path='/crew'>
+          <Crew data={data} />
         </Route>
       </Switch>
     </Router>

@@ -33,27 +33,27 @@ export const Wrapper = styled.ul`
     transition: transform 0.5s ease-in-out;
   }
 
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 1em 0;
+    color: rgb(var(--clr-white));
+    border-bottom: 0.2rem solid rgb(var(--clr-white) / 0);
+    cursor: pointer;
+  }
+
   span {
     font-weight: 700;
     margin-right: 0.5em;
   }
 
-  > * {
-    padding: 1em 0;
-    color: rgb(var(--clr-light));
-    border-bottom: 0.2rem solid rgb(var(--clr-white) / 0);
-    cursor: pointer;
-  }
-
-  > *:hover,
-  > *:focus {
+  a:hover,
+  a:focus {
     border-color: rgb(var(--clr-white) / 0.5);
   }
 
-  > .active {
-    /* color: rgb(var(--clr-white) / 1);
-    border-color: rgb(var(--clr-white) / 1); */
-    border: 0;
+  .active {
+    border-color: rgb(var(--clr-white) / 1);
   }
 
   @media (min-width: 35em) {

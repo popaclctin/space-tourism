@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Tabs from '../../components/Tabs';
 
 import moon from '../../assets/destination/image-moon.png';
+import moonwebp from '../../assets/destination/image-moon.webp';
 
 export default function Destination() {
   return (
@@ -13,8 +14,10 @@ export default function Destination() {
         <h1 class='numbered-title'>
           <span>01</span> Pick your destination
         </h1>
-
-        <img src={moon} alt='the moon' />
+        <picture>
+          <source srcset={moonwebp} type='image/webp' />
+          <img src={moon} alt='the moon' />
+        </picture>
 
         <div className='tabs-list'>
           <Tabs />

@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
         --ff-sans-normal: 'Barlow', sans-serif;
         --ff-sans-cond: 'Barlow Condensed', sans-serif;
         --ff-serif: 'Bellefair', serif;
-    }
+    
 
     //Tablet
     @media(min-width:35em) {
@@ -49,7 +49,7 @@ export const GlobalStyle = createGlobalStyle`
         --fs-500: 1.75rem;
         --fs-400: 1.125rem;
     }
-    
+}
     /* ------------------- */
     /* Reset   */
     /* ------------------- */
@@ -119,6 +119,18 @@ export const GlobalStyle = createGlobalStyle`
     /* ------------------- */
     /* Utility classes     */
     /* ------------------- */
+
+    .sr-only {
+        position: absolute; 
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px; 
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap; /* added line */
+        border: 0;
+    }
 
     .flex {
         display:flex;
