@@ -53,7 +53,7 @@ In the future I would like to dinamically import the content of each page from a
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/popaclctin)
+- Frontend Mentor - [@popaclctin](https://www.frontendmentor.io/profile/popaclctin)
 
 ## Acknowledgments
 
