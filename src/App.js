@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -13,6 +13,9 @@ import Hurley from './pages/Crew/Hurley';
 import Shuttleworth from './pages/Crew/Shuttleworth';
 import Glover from './pages/Crew/Glover';
 import Ansari from './pages/Crew/Ansari';
+import Capsule from './pages/Technology/Capsule';
+import Port from './pages/Technology/Port';
+import Vehicle from './pages/Technology/Vehicle';
 
 export default function App() {
   return (
@@ -34,6 +37,11 @@ export default function App() {
         <Route exact path='/crew/Shuttleworth' component={Shuttleworth} />
         <Route exact path='/crew/Glover' component={Glover} />
         <Route exact path='/crew/Ansari' component={Ansari} />
+
+        <Route exact path='/technology' component={Vehicle} />
+        <Route exact path='/technology/vehicle' component={Vehicle} />
+        <Route exact path='/technology/port' component={Port} />
+        <Route exact path='/technology/capsule' component={Capsule} />
       </Switch>
     </Router>
   );
