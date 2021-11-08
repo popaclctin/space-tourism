@@ -16,7 +16,7 @@ export default function Mars() {
         </h1>
         <picture>
           <source srcSet={marswebp} type='image/webp' />
-          <img src={mars} alt='the moon' />
+          <img src={mars} alt='the planet Mars' />
         </picture>
 
         <div className='tabs-list'>

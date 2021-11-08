@@ -16,7 +16,7 @@ export default function Europa() {
         </h1>
         <picture>
           <source srcSet={europawebp} type='image/webp' />
-          <img src={europa} alt='the moon' />
+          <img src={europa} alt='the moon Europa' />
         </picture>
 
         <div className='tabs-list'>

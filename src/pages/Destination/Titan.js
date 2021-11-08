@@ -16,7 +16,7 @@ export default function Titan() {
         </h1>
         <picture>
           <source srcSet={titanwebp} type='image/webp' />
-          <img src={titan} alt='the moon' />
+          <img src={titan} alt='the moon Titan' />
         </picture>
 
         <div className='tabs-list'>
